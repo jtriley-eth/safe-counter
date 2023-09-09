@@ -10,7 +10,6 @@ error Underflow(uint256 count);
 
 struct SafeCounter {
     uint256 __inner;
-    mapping(address => bool) __blockList;
 }
 
 using {increment, safeIncrement, decrement, safeDecrement, current, requireNotSanctioned} for SafeCounter global;
