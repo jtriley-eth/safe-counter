@@ -2,10 +2,10 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/Counter.sol";
+import "../src/SafeCounter.sol";
 
 contract CounterTest is Test {
-    Counter public counter;
+    SafeCounter public counter;
 
     function testIncrement() public {
         counter.increment();
