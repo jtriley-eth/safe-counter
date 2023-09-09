@@ -13,7 +13,7 @@ struct SafeCounter {
     mapping(address => bool) __blockList;
 }
 
-using {increment, safeIncrement, decrement, safeDecrement, current, isBlocked, requireNotBlocked} for SafeCounter global;
+using {increment, safeIncrement, decrement, safeDecrement, current, isBlocked, requireNotBlocked, sanction} for SafeCounter global;
 
 function current(SafeCounter storage counter) view returns (uint256) {
     return counter.__inner;
