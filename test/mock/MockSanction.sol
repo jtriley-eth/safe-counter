@@ -4,13 +4,9 @@ pragma solidity ^0.8.21;
 import "../../src/SafeCounter.sol";
 
 contract MockSanction {
-    SafeCounter internal counter;
+    mapping(address => bool) public isSanctioned;
 
     function complyWithOfac(address actor) public {
-        counter.sanction(actor);
-    }
-
-    function incrementSafeCounter() public {
-        counter.increment();
+        isSanctioned[actor] = true;
     }
 }
